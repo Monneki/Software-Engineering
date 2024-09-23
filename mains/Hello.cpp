@@ -3,6 +3,6 @@
 
 int main()
 {
-	hello_world();
-	print_version();
+    hello_world();
+    print_version();
 }

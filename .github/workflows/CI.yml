@@ -6,13 +6,14 @@ env:
  BUILD_TYPE: Release
 jobs:
  build:
- runs-on: ubuntu-latest
- steps:
- - uses: actions/checkout@v4
- - name: Configure CMake
-   run:|
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v4
+  - name: Configure CMake
+    run: |
      mkdir build
      cd build
      cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} ..
      cmake --build . --config ${{env.BUILD_TYPE}}
      ctest -C ${{env.BUILD_TYPE}}
+

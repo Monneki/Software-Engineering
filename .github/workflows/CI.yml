@@ -17,7 +17,7 @@ jobs:
      cmake --build . --config ${{env.BUILD_TYPE}}
      ctest -C ${{env.BUILD_TYPE}}
  semantic-release:
-   runs-on: unbuntu-latest
+   runs-on: ubuntu-latest
    needs: [build]
    steps:
    - uses: actions/checkout@v4

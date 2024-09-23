@@ -5,3 +5,5 @@ modification CD pour gity
 
 ajouit du .releaserc
 1ère version?
+
+ajout format v2

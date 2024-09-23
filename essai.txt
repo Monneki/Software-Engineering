@@ -7,3 +7,5 @@ ajouit du .releaserc
 1ère version?
 
 ajout format v2
+
+push

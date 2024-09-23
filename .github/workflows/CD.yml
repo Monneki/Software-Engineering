@@ -24,6 +24,6 @@ jobs:
     with:
      files: "build/*.tar.gz"
     env:
-     GITHUB_TOKKEN: ${{secret.TOKEN}}
+     GITHUB_TOKKEN: ${{secrets.TOKEN}}
     
 

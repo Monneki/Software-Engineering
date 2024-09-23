@@ -15,7 +15,7 @@ jobs:
      cd build
      version="${GITHUB_REF##*/*/}"
      echo ::set-output name=version::$version
-     cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCPACK_PACKAGE_VERSION:STRING=$version - DCPACK_SYSTEM_NAME:STRING=linus-Release ..
+     cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCPACK_PACKAGE_VERSION:STRING=$version -DCPACK_SYSTEM_NAME:STRING=linus-Release ..
      cmake --vuild . --config ${{env.BUILD_TYPE}}
      cmake --build . --target package
   - name: Upload

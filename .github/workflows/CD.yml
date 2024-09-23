@@ -23,6 +23,6 @@ jobs:
     with:
      files: "build/*.tar.gz"
     env:
-     GITHUB_TOKKEN: ${{secrets.TOKEN}}
+     GITHUB_TOKEN: ${{secrets.TOKEN}}
     
 

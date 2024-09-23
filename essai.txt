@@ -4,3 +4,4 @@ on continuye les modifs
 modification CD pour gity
 
 ajouit du .releaserc
+1ère version?

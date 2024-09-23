@@ -16,14 +16,14 @@ jobs:
      version="${GITHUB_REF##*/*/}"
      echo ::set-output name=version::$version
      cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCPACK_PACKAGE_VERSION:STRING=$version
-  - DCPACK_SYSTEM_NAME:STRING=linus-Release ..
+     - DCPACK_SYSTEM_NAME:STRING=linus-Release ..
      cmake --vuild . --config ${{env.BUILD_TYPE}}
      cmake --build . --target package
   - name: Upload
-  uses: softprops/action-gh-release@v1
-  with:
-   files: "build/*.tar.gz"
-   env:
-    GITHUB_TOKKEN: ${{secret.TOKEN}}
+    uses: softprops/action-gh-release@v1
+    with:
+     files: "build/*.tar.gz"
+    env:
+     GITHUB_TOKKEN: ${{secret.TOKEN}}
     
 
